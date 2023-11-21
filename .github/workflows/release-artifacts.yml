@@ -52,7 +52,11 @@ jobs:
     strategy:
       matrix:
         distro: ${{ fromJson(needs.get-distros.outputs.distros) }}
-
+        platform:
+          - linux/amd64
+          - linux/arm/v6
+          - linux/arm/v7
+          - linux/arm64
     steps:
       - name: Checkout
         uses: actions/checkout@v4
