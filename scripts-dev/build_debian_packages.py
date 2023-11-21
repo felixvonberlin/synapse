@@ -91,7 +91,8 @@ class Builder:
             stdout = open(logfile, "w")
         else:
             stdout = None
-
+		import platform; 
+		print("=======", platform.machine(), "=======") 
         # first build a docker image for the build environment
         build_args = (
             (
