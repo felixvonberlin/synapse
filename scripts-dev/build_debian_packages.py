@@ -98,6 +98,7 @@ class Builder:
             (
                 "docker",
                 "build",
+                "--platform", "arm64",
                 "--tag",
                 "dh-venv-builder:" + tag,
                 "--build-arg",
